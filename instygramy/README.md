@@ -41,6 +41,6 @@ Here's a walkthrough of implemented user stories:
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
 ## Notes
-Im having issues with some errors that I dont seem to understand why they are arising. In additon, I'm having trouble un understanding the transittion in selecting the photo and trying to post it on the timelime. I'm very close to being complete, but there are some things that I need clarifciation and help with before its complete. 
+I'm having issues with some errors that I dont seem to understand why they are arising. In additon, I'm having trouble un understanding the transittion in selecting the photo and trying to post it on the timelime. I'm very close to being complete, but there are some things that I need clarifciation and help with before its complete. When running the app to test it, is there any way you can give me any hints on why those certain errors are coming up? Your help would be grately appreciated :)!
 
 ## License
