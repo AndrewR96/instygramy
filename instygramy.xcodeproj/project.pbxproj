@@ -14,6 +14,13 @@
 		9C4C42451C949E3900BBA327 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C4C42431C949E3900BBA327 /* LaunchScreen.storyboard */; };
 		9C4C42501C949E3900BBA327 /* instygramyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C4C424F1C949E3900BBA327 /* instygramyTests.swift */; };
 		9C4C425B1C949E3900BBA327 /* instygramyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C4C425A1C949E3900BBA327 /* instygramyUITests.swift */; };
+		9C4C42691C94D8BA00BBA327 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C4C42681C94D8BA00BBA327 /* LoginViewController.swift */; };
+		9C6E86211C9F2BE400A2AF24 /* profileViewContoller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6E86201C9F2BE400A2AF24 /* profileViewContoller.swift */; };
+		9C6E86231C9F2C0400A2AF24 /* timelineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6E86221C9F2C0400A2AF24 /* timelineViewController.swift */; };
+		9C6E86251C9F2C5400A2AF24 /* captureViewContoller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6E86241C9F2C5400A2AF24 /* captureViewContoller.swift */; };
+		9C6E862A1C9F572D00A2AF24 /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6E86291C9F572D00A2AF24 /* PhotoCell.swift */; };
+		9C6E86311C9F5C7B00A2AF24 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6E86301C9F5C7B00A2AF24 /* Post.swift */; };
+		D5326D909225C6A79D84E360 /* Pods_instygramy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 382124DFB528D136999EE55D /* Pods_instygramy.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +41,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		382124DFB528D136999EE55D /* Pods_instygramy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_instygramy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8E9473903806283D05803F01 /* Pods-instygramy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-instygramy.debug.xcconfig"; path = "Pods/Target Support Files/Pods-instygramy/Pods-instygramy.debug.xcconfig"; sourceTree = "<group>"; };
 		9C4C42371C949E3900BBA327 /* instygramy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = instygramy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C4C423A1C949E3900BBA327 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9C4C423C1C949E3900BBA327 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +56,13 @@
 		9C4C42561C949E3900BBA327 /* instygramyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = instygramyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C4C425A1C949E3900BBA327 /* instygramyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = instygramyUITests.swift; sourceTree = "<group>"; };
 		9C4C425C1C949E3900BBA327 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9C4C42681C94D8BA00BBA327 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		9C6E86201C9F2BE400A2AF24 /* profileViewContoller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = profileViewContoller.swift; sourceTree = "<group>"; };
+		9C6E86221C9F2C0400A2AF24 /* timelineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = timelineViewController.swift; sourceTree = "<group>"; };
+		9C6E86241C9F2C5400A2AF24 /* captureViewContoller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = captureViewContoller.swift; sourceTree = "<group>"; };
+		9C6E86291C9F572D00A2AF24 /* PhotoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
+		9C6E86301C9F5C7B00A2AF24 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		BD04354855585814329AD082 /* Pods-instygramy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-instygramy.release.xcconfig"; path = "Pods/Target Support Files/Pods-instygramy/Pods-instygramy.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D5326D909225C6A79D84E360 /* Pods_instygramy.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +91,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4E2FAEB9A4B262072B23049B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8E9473903806283D05803F01 /* Pods-instygramy.debug.xcconfig */,
+				BD04354855585814329AD082 /* Pods-instygramy.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		9C4C422E1C949E3800BBA327 = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +107,8 @@
 				9C4C424E1C949E3900BBA327 /* instygramyTests */,
 				9C4C42591C949E3900BBA327 /* instygramyUITests */,
 				9C4C42381C949E3900BBA327 /* Products */,
+				4E2FAEB9A4B262072B23049B /* Pods */,
+				D063C48C34FE5080F5D45C70 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,6 +125,9 @@
 		9C4C42391C949E3900BBA327 /* instygramy */ = {
 			isa = PBXGroup;
 			children = (
+				9C6E862B1C9F5A8900A2AF24 /* Model */,
+				9C6E86261C9F315400A2AF24 /* Cell Views */,
+				9C6E861F1C9F2AF800A2AF24 /* View Controllers */,
 				9C4C423A1C949E3900BBA327 /* AppDelegate.swift */,
 				9C4C423C1C949E3900BBA327 /* ViewController.swift */,
 				9C4C423E1C949E3900BBA327 /* Main.storyboard */,
@@ -125,6 +156,41 @@
 			path = instygramyUITests;
 			sourceTree = "<group>";
 		};
+		9C6E861F1C9F2AF800A2AF24 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				9C4C42681C94D8BA00BBA327 /* LoginViewController.swift */,
+				9C6E86201C9F2BE400A2AF24 /* profileViewContoller.swift */,
+				9C6E86221C9F2C0400A2AF24 /* timelineViewController.swift */,
+				9C6E86241C9F2C5400A2AF24 /* captureViewContoller.swift */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		9C6E86261C9F315400A2AF24 /* Cell Views */ = {
+			isa = PBXGroup;
+			children = (
+				9C6E86291C9F572D00A2AF24 /* PhotoCell.swift */,
+			);
+			name = "Cell Views";
+			sourceTree = "<group>";
+		};
+		9C6E862B1C9F5A8900A2AF24 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9C6E86301C9F5C7B00A2AF24 /* Post.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		D063C48C34FE5080F5D45C70 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				382124DFB528D136999EE55D /* Pods_instygramy.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +198,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9C4C425F1C949E3900BBA327 /* Build configuration list for PBXNativeTarget "instygramy" */;
 			buildPhases = (
+				1D7EA8A3BA3E6B54292DC7DD /* Check Pods Manifest.lock */,
 				9C4C42331C949E3800BBA327 /* Sources */,
 				9C4C42341C949E3800BBA327 /* Frameworks */,
 				9C4C42351C949E3800BBA327 /* Resources */,
+				2D3C2DB42263467250D42D59 /* Embed Pods Frameworks */,
+				E643E916ABE1B586C1B5D613 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -254,13 +323,67 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1D7EA8A3BA3E6B54292DC7DD /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		2D3C2DB42263467250D42D59 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-instygramy/Pods-instygramy-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E643E916ABE1B586C1B5D613 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-instygramy/Pods-instygramy-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		9C4C42331C949E3800BBA327 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C6E862A1C9F572D00A2AF24 /* PhotoCell.swift in Sources */,
+				9C6E86251C9F2C5400A2AF24 /* captureViewContoller.swift in Sources */,
+				9C4C42691C94D8BA00BBA327 /* LoginViewController.swift in Sources */,
+				9C6E86311C9F5C7B00A2AF24 /* Post.swift in Sources */,
 				9C4C423D1C949E3900BBA327 /* ViewController.swift in Sources */,
+				9C6E86231C9F2C0400A2AF24 /* timelineViewController.swift in Sources */,
 				9C4C423B1C949E3900BBA327 /* AppDelegate.swift in Sources */,
+				9C6E86211C9F2BE400A2AF24 /* profileViewContoller.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -400,6 +523,7 @@
 		};
 		9C4C42601C949E3900BBA327 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8E9473903806283D05803F01 /* Pods-instygramy.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = instygramy/Info.plist;
@@ -411,6 +535,7 @@
 		};
 		9C4C42611C949E3900BBA327 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BD04354855585814329AD082 /* Pods-instygramy.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = instygramy/Info.plist;
@@ -487,6 +612,7 @@
 				9C4C42611C949E3900BBA327 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9C4C42621C949E3900BBA327 /* Build configuration list for PBXNativeTarget "instygramyTests" */ = {
 			isa = XCConfigurationList;
@@ -495,6 +621,7 @@
 				9C4C42641C949E3900BBA327 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9C4C42651C949E3900BBA327 /* Build configuration list for PBXNativeTarget "instygramyUITests" */ = {
 			isa = XCConfigurationList;
@@ -503,6 +630,7 @@
 				9C4C42671C949E3900BBA327 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
