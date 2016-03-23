@@ -9,21 +9,17 @@
 import UIKit
 import Parse
 
-class captureViewContoller: UIImagePickerController,UIImagePickerControllerDelegate, UIViewController {
+class captureViewContoller: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
+   //UIImagePickerController
+    //
    
-    @IBOutlet weak var postButton: UIButton!
     @IBOutlet weak var captionImage: UILabel!
     @IBOutlet weak var postedImage: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        let vc = captureViewContoller()
-        vc.delegate = self
-        vc.allowsEditing = true
-        vc.sourceType = UIImagePickerControllerSourceType.Camera
-        
-        self.presentViewController(vc, animated: true, completion: nil)
+        captionImage.text = ""
         
         
         // Do any additional setup after loading the view.
@@ -34,10 +30,10 @@ class captureViewContoller: UIImagePickerController,UIImagePickerControllerDeleg
         // Dispose of any resources that can be recreated.
     }
     func imagePickerController(picker: UIImagePickerController,
-        didFinishPickingMediaWithInfo info: [String : AnyObject]) {
+        didFinishPickingMediaWithInfo image: UIImage, info: [String : AnyObject]) {
             // Get the image captured by the UIImagePickerController
-            let originalImage = info[UIImagePickerControllerOriginalImage] as! UIImage
-            let editedImage = info[UIImagePickerControllerEditedImage] as! UIImage
+            //let originalImage = info[UIImagePickerControllerOriginalImage] as! UIImage
+            //let editedImage = info[UIImagePickerControllerEditedImage] as! UIImage
             
             // Do something with the images (based on your use case)
             
@@ -45,10 +41,29 @@ class captureViewContoller: UIImagePickerController,UIImagePickerControllerDeleg
             dismissViewControllerAnimated(true, completion: nil)
     }
     
-    @IBAction func postPic(sender: AnyObject) {
+    @IBAction func camera(sender: AnyObject) {
+        let vc = UIImagePickerController()
+        vc.delegate = self
+       vc.allowsEditing = false
+        vc.sourceType = UIImagePickerControllerSourceType.Camera
+        
+        self.presentViewController(vc, animated: true, completion: nil)
     }
     
-   /*
+    
+    @IBAction func photoLib(sender: AnyObject) {
+        let vc = UIImagePickerController()
+        vc.delegate = self
+        vc.allowsEditing = false
+        vc.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
+        
+        self.presentViewController(vc, animated: true, completion: nil)
+    }
+   
+   
+    
+   
+    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation

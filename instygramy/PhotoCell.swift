@@ -13,7 +13,7 @@ import ParseUI
 class PhotoCell: UITableViewCell {
 
     @IBOutlet weak var usernameLabel: UILabel!
-    @IBOutlet weak var postedImage: UIImageView!
+    @IBOutlet weak var postedImage: PFImageView!
     @IBOutlet weak var captionLabel: UILabel!
     
     

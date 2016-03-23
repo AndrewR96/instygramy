@@ -11,7 +11,7 @@ import Parse
 import ParseUI
 import MBProgressHUD
 
-class timelineViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class timelineViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UINavigationControllerDelegate, UIImagePickerControllerDelegate{
 
     @IBOutlet weak var tableView: UITableView!
     
@@ -21,6 +21,10 @@ class timelineViewController: UIViewController, UITableViewDelegate, UITableView
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        tableView.delegate = self
+        tableView.dataSource = self
+        
+        getData()
         
         // Do any additional setup after loading the view.
     }
