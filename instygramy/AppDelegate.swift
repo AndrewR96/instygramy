@@ -28,6 +28,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         )
         // Override point for customization after application launch.
+       
+        
+        if PFUser.currentUser() != nil
+        {
+            print ("Sorry \(PFUser.currentUser()?.username) this is logged in already")
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let vc = storyboard.instantiateViewControllerWithIdentifier("TabBarController")
+            
+            
+            window?.rootViewController = vc
+        }
+        
+        
         return true
     }
 

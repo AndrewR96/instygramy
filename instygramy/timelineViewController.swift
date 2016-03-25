@@ -9,7 +9,7 @@
 import UIKit
 import Parse
 import ParseUI
-import MBProgressHUD
+
 
 class timelineViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UINavigationControllerDelegate, UIImagePickerControllerDelegate{
 
@@ -17,6 +17,10 @@ class timelineViewController: UIViewController, UITableViewDelegate, UITableView
     
     var posts: [PFObject]?
     
+    @IBAction func logOut(sender: AnyObject) {
+        PFUser.logOut()
+        self.performSegueWithIdentifier("loginPage", sender: nil)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,8 +38,14 @@ class timelineViewController: UIViewController, UITableViewDelegate, UITableView
         // Dispose of any resources that can be recreated.
     }
     
-   
-    func getData(){ let query = PFQuery(className: "Post")
+    override func viewWillAppear(animated: Bool) {
+        getData()
+        tableView.reloadData()
+    }
+    
+    
+    func getData(){
+        let query = PFQuery(className: "Post")
         query.orderByDescending("createdAt")
         query.includeKey("author")
         query.limit = 20
@@ -43,15 +53,14 @@ class timelineViewController: UIViewController, UITableViewDelegate, UITableView
         // fetch data asynchronously
         query.findObjectsInBackgroundWithBlock { (posts: [PFObject]?, error: NSError?) -> Void in
             if let posts = posts {
-                MBProgressHUD.hideHUDForView(self.view, animated: true)
+                print("data fetched")
+                self.posts = posts
                 self.tableView.reloadData()
             } else {
-                print(error?.localizedDescription)
+                print ("Error: data not fetched")
             }
         }
-        
     }
-    
     
     
 func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int{

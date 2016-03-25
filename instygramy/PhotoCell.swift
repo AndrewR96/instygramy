@@ -12,10 +12,11 @@ import ParseUI
 
 class PhotoCell: UITableViewCell {
 
-    @IBOutlet weak var usernameLabel: UILabel!
     @IBOutlet weak var postedImage: PFImageView!
+
     @IBOutlet weak var captionLabel: UILabel!
     
+   
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -27,7 +28,7 @@ class PhotoCell: UITableViewCell {
             self.postedImage.file = instagramPost["media"] as? PFFile
             self.postedImage.loadInBackground()
             self.captionLabel.text = instagramPost["caption"] as? String
-            self.usernameLabel.text = PFUser.currentUser()?.username
+            //self.usernameLabel.text = PFUser.currentUser()?.username
         
         }
     }

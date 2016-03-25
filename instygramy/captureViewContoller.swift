@@ -12,14 +12,17 @@ import Parse
 class captureViewContoller: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
    //UIImagePickerController
-    //
+    
+
+    var photoImageView = UIImageView(frame: CGRectMake(40, 120, 200, 200))
    
-    @IBOutlet weak var captionImage: UILabel!
-    @IBOutlet weak var postedImage: UIImageView!
+    
+    @IBOutlet weak var captionText: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        captionImage.text = ""
+        captionText.text = "caption"
+        self.view.addSubview(photoImageView)
         
         
         // Do any additional setup after loading the view.
@@ -29,40 +32,44 @@ class captureViewContoller: UIViewController, UIImagePickerControllerDelegate, U
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    func imagePickerController(picker: UIImagePickerController,
-        didFinishPickingMediaWithInfo image: UIImage, info: [String : AnyObject]) {
-            // Get the image captured by the UIImagePickerController
-            //let originalImage = info[UIImagePickerControllerOriginalImage] as! UIImage
-            //let editedImage = info[UIImagePickerControllerEditedImage] as! UIImage
-            
-            // Do something with the images (based on your use case)
-            
-            // Dismiss UIImagePickerController to go back to your original view controller
-            dismissViewControllerAnimated(true, completion: nil)
-    }
-    
-    @IBAction func camera(sender: AnyObject) {
-        let vc = UIImagePickerController()
-        vc.delegate = self
-       vc.allowsEditing = false
-        vc.sourceType = UIImagePickerControllerSourceType.Camera
-        
-        self.presentViewController(vc, animated: true, completion: nil)
-    }
-    
-    
+   
     @IBAction func photoLib(sender: AnyObject) {
-        let vc = UIImagePickerController()
-        vc.delegate = self
-        vc.allowsEditing = false
-        vc.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
-        
-        self.presentViewController(vc, animated: true, completion: nil)
+        var photoPicker = UIImagePickerController()
+        photoPicker.delegate = self
+        photoPicker.sourceType = .PhotoLibrary
+        self.presentViewController(photoPicker, animated: true, completion: nil)
     }
-   
-   
     
-   
+
+    func imagePickerController(picker: UIImagePickerController,
+        didFinishPickingMediaWithInfo info: [String : AnyObject]) {
+        
+        photoImageView.image = info[UIImagePickerControllerOriginalImage] as? UIImage
+        dismissViewControllerAnimated(false, completion: nil)
+    }
+
+
+    
+    
+
+    @IBAction func submit(sender: AnyObject) {
+        let resizeImage = Post.resize(photoImageView.image!, newSize: CGSize(width: 250, height: 250))
+        
+        Post.postUserImage(resizeImage, withCaption: captionText.text) { (success: Bool, error: NSError?) -> Void in
+            if success {
+                self.tabBarController?.selectedIndex = 0
+            } else {
+                print(error?.localizedDescription)
+            }
+        }
+    }
+    
+    
+    
+
+
+
+
     /*
     // MARK: - Navigation
 
